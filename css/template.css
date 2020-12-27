@@ -38,16 +38,6 @@ body > .container {
   margin: 2rem 0;
 }
 
-.jumbotron {
-  text-align: center;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-bottom: .05rem solid #e5e5e5;
-}
-.jumbotron .btn {
-  padding: .75rem 1.5rem;
-  font-size: 1.5rem;
-}
-
 .marketing {
   margin: 3rem 0;
 }
@@ -64,9 +54,6 @@ body > .container {
   }
   .header {
     margin-bottom: 2rem;
-  }
-  .jumbotron {
-    border-bottom: 0;
   }
 }
 
