@@ -1,10 +1,10 @@
 body {
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 
-  background: #fff url('../img/background.jpg') no-repeat center fixed;
-  background-size: cover;
-  color: #fff;
+    background: #fff url('../img/Background.jpg') no-repeat center fixed;
+    background-size: cover;
+    color: #fff;
 }
 
 .display-3 {
