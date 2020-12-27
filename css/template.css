@@ -63,13 +63,6 @@ body > .container {
     margin: 0 auto;
 }
 
-.flexbox {
-	display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-}
-
 .container-fluid img {
     max-height: 6em;
     display: block;
