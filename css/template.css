@@ -24,9 +24,3 @@ body > .container {
     display: block;
     margin: 0 auto;
 }
-
-.container-fluid img {
-    max-height: 6em;
-    display: block;
-    margin: 0 auto;
-}
