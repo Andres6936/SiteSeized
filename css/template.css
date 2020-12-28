@@ -18,9 +18,3 @@ body > .container {
 .container-narrow > hr {
   margin: 2rem 0;
 }
-
-.footer img {
-    max-height: 6em;
-    display: block;
-    margin: 0 auto;
-}
