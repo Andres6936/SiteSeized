@@ -19,25 +19,6 @@ body > .container {
   margin: 2rem 0;
 }
 
-.marketing {
-  margin: 3rem 0;
-}
-.marketing p + h4 {
-  margin-top: 1.5rem;
-}
-
-@media screen and (min-width: 48em) {
-  .header,
-  .marketing,
-  .footer {
-    padding-right: 0;
-    padding-left: 0;
-  }
-  .header {
-    margin-bottom: 2rem;
-  }
-}
-
 .footer img {
     max-height: 6em;
     display: block;
