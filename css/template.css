@@ -9,12 +9,3 @@ body > .container {
   padding: 15px;
   border-radius: .3rem;
 }
-
-@media (min-width: 48em) {
-  .container {
-    max-width: 80rem;
-  }
-}
-.container-narrow > hr {
-  margin: 2rem 0;
-}
