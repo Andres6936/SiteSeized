@@ -1,0 +1,12 @@
+{
+  "name": "siteseized",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@master/css": "^1.37.8",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
