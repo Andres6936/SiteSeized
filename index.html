@@ -14,9 +14,57 @@
         :root {
             --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
         }
+
+        /* 1. Use a more-intuitive box-sizing model */
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
+        /* 2. Remove default margin */
+        * {
+            margin: 0;
+        }
+
+        body {
+            /* 3. Add accessible line-height */
+            line-height: 1.5;
+            /* 4. Improve text rendering */
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 5. Improve media defaults */
+        img, picture, video, canvas, svg {
+            display: block;
+            max-width: 100%;
+        }
+
+        /* 6. Inherit fonts for form controls */
+        input, button, textarea, select {
+            font: inherit;
+        }
+
+        /* 7. Avoid text overflows */
+        p, h1, h2, h3, h4, h5, h6 {
+            overflow-wrap: break-word;
+        }
+
+        /* 8. Improve line wrapping */
+        p {
+            text-wrap: pretty;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            text-wrap: balance;
+        }
+
+        /*
+          9. Create a root stacking context
+        */
+        #root, #__next {
+            isolation: isolate;
+        }
     </style>
 </head>
-<body class="font:sans w:100dw h:100dh flex flex:col justify-content:center align-items:center py:1rem@md bg:#FFF|url('../img/Background.jpg')|no-repeat|center|fixed bg:cover color:white">
+<body id="root" class="font:sans w:100dw h:100dh flex flex:col justify-content:center align-items:center py:1rem@md bg:#FFF|url('../img/Background.jpg')|no-repeat|center|fixed bg:cover color:white">
 <div class="max-w:md@lg max-w:lg@xl flex flex:col justify-content:center align-items:center p:1rem bg:rgba(0,0,0,0.4) r:0.5rem">
     <div class="flex flex:1 w:full flex:row justify-content:space-around align-items:center gap:1rem my:0.5rem">
         <div class="aspect-ratio:1/1 w:7rem w:9rem@md">
@@ -31,8 +79,8 @@
     </div>
 
     <div class="text:center r:0.5rem mt:1rem" style="background-color: rgba(255, 255, 255, 0.1);">
-        <h1 class="font-size:6.5vw uppercase font:bold lh:1.2 my:0 pt:3rem pb:1rem">This domain has been seized</h1>
-        <h3 class="font-size:3.5vw text:right mx:1rem font:light py:0 my:0 lh:1">Since 21 December, 2020</h3>
+        <h1 class="font-size:5.5vw uppercase font:bold lh:1.2 pt:3rem pb:1rem">This domain has been seized</h1>
+        <h3 class="font-size:3.5vw text:right mx:1rem font:light py:1rem pb:3rem@md lh:1">Since 21 December, 2020</h3>
 
         <p class="font-size:1.5vw@md mx:auto w:80% font:light lh:1.5">
             as part of Operation Nova, a law enforcement operation by the <strong>Reutlingen Police Headquarters – CID
@@ -45,7 +93,7 @@
             The analysis of the seized data and the international investigations regarding the operators and users of
             the network will be continued.
         </p>
-        <img alt="Safe Inet" src="img/SafeInet.png" width="300" height="300" class="my:1rem">
+        <img alt="Safe Inet" src="img/SafeInet.png" width="300" height="300" class="my:1rem mx:auto">
     </div>
 
     <footer class="flex flex:1 flex:col w:full mt:1rem bt:1px|solid|white">
