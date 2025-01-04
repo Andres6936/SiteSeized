@@ -25,5 +25,8 @@ import * as domhandler from 'domhandler';
         new domhandler.Text(css)
     ]))
 
-    await Bun.write("index.html", renderdom.default(dom));
+    await Bun.write("index.html", renderdom.default(dom, {
+        decodeEntities: false,
+        encodeEntities: false,
+    }));
 })();
