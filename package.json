@@ -4,7 +4,11 @@
   "type": "module",
   "devDependencies": {
     "@master/css": "^1.37.8",
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "dom-serializer": "^2.0.0",
+    "domhandler": "^5.0.3",
+    "domutils": "^3.2.1",
+    "htmlparser2": "^10.0.0"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
