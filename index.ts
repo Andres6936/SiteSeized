@@ -9,14 +9,11 @@ import * as domhandler from 'domhandler';
     const html = await Bun.file("index.html").text();
     const dom = htmlparser.parseDocument(html);
 
-    const [head] = domutils.getElementsByTagName("head", dom)
-    for (let element of head.children) {
-        const elementType = domutils.getName(element)
-        if (elementType === "script") {
-            const src = domutils.getAttributeValue(element, "src")
-            if (src === "https://cdn.master.co/css") {
-                domutils.removeElement(element)
-            }
+    const scripts = domutils.getElementsByTagName("script", dom)
+    for (let script of scripts) {
+        const src = domutils.getAttributeValue(script, "src")
+        if (src === "https://cdn.master.co/css") {
+            domutils.removeElement(script)
         }
     }
 
