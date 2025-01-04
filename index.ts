@@ -20,9 +20,13 @@ import * as domhandler from 'domhandler';
         }
     }
 
+    const [style] = domutils.getElementsByTagName("style", dom)
+    const [text] = domutils.getChildren(style)
+    const currentCss = text.data;
+
     const {css} = render(html, {StyleSheet})
-    domutils.appendChild(head, new domhandler.Element("style", {}, [
-        new domhandler.Text(css)
+    domutils.replaceElement(style, new domhandler.Element("style", {}, [
+        new domhandler.Text(currentCss + '\n\r' + css + '\n\r')
     ]))
 
     await Bun.write("index.html", renderdom.default(dom, {
