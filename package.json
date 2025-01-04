@@ -5,6 +5,7 @@
   "devDependencies": {
     "@master/css": "^1.37.8",
     "@types/bun": "latest",
+    "@types/html-minifier": "^4.0.5",
     "dom-serializer": "^2.0.0",
     "domhandler": "^5.0.3",
     "domutils": "^3.2.1",
