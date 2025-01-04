@@ -32,6 +32,7 @@ import * as htmlminifier from 'html-minifier';
         encodeEntities: false,
     })
     const htmlMinify = htmlminifier.minify(newHtml, {
+        minifyCSS: true,
         removeComments: true,
         collapseWhitespace: true,
     })
