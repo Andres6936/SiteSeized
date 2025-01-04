@@ -19,7 +19,7 @@ import * as domhandler from 'domhandler';
 
     const [style] = domutils.getElementsByTagName("style", dom)
     const [text] = domutils.getChildren(style)
-    const currentCss = text.data;
+    const currentCss = (text as domhandler.Text).data;
 
     const {css} = render(html, {StyleSheet})
     domutils.replaceElement(style, new domhandler.Element("style", {}, [
