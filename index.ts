@@ -37,5 +37,5 @@ import * as htmlminifier from 'html-minifier';
         collapseWhitespace: true,
     })
 
-    await Bun.write("index.html", htmlMinify);
+    await Bun.write("bundle-minify-index.html", htmlMinify);
 })();
