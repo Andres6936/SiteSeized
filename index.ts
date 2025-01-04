@@ -4,6 +4,7 @@ import * as htmlparser from 'htmlparser2'
 import * as domutils from 'domutils';
 import * as renderdom from "dom-serializer";
 import * as domhandler from 'domhandler';
+import * as htmlminifier from 'html-minifier';
 
 (async () => {
     const html = await Bun.file("index.html").text();
@@ -26,8 +27,14 @@ import * as domhandler from 'domhandler';
         new domhandler.Text(currentCss + '\n\r' + css + '\n\r')
     ]))
 
-    await Bun.write("index.html", renderdom.default(dom, {
+    const newHtml = renderdom.default(dom, {
         decodeEntities: false,
         encodeEntities: false,
-    }));
+    })
+    const htmlMinify = htmlminifier.minify(newHtml, {
+        removeComments: true,
+        collapseWhitespace: true,
+    })
+
+    await Bun.write("index.html", htmlMinify);
 })();
