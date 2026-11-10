@@ -13,7 +13,7 @@ import * as htmlminifier from 'html-minifier';
     const scripts = domutils.getElementsByTagName("script", dom)
     for (let script of scripts) {
         const src = domutils.getAttributeValue(script, "src")
-        if (src === "https://cdn.master.co/css") {
+        if (src.startsWith("https://cdn.master.co/css")) {
             domutils.removeElement(script)
         }
     }
